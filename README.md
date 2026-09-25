@@ -25,7 +25,7 @@ python3 -m http.server 8765
 Then open:
 
 ```text
-http://localhost:8765/viewer/?pid=1218326&frame=26
+http://localhost:8765/
 ```
 
 No build step or package installation is required.
