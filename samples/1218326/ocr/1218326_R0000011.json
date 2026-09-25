@@ -1,0 +1,974 @@
+{
+  "contents": [
+    [
+      {
+        "boundingBox": [
+          [
+            2851,
+            1012
+          ],
+          [
+            2851,
+            1382
+          ],
+          [
+            2918,
+            1012
+          ],
+          [
+            2918,
+            1382
+          ]
+        ],
+        "id": 0,
+        "isVertical": "true",
+        "text": "凡例",
+        "isTextline": "true",
+        "confidence": 0.935,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2680,
+            726
+          ],
+          [
+            2680,
+            2281
+          ],
+          [
+            2748,
+            726
+          ],
+          [
+            2748,
+            2281
+          ]
+        ],
+        "id": 1,
+        "isVertical": "true",
+        "text": "一、本書は現今臺灣に於て行はるゝ厦門語系の言語",
+        "isTextline": "true",
+        "confidence": 0.952,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2564,
+            781
+          ],
+          [
+            2564,
+            2273
+          ],
+          [
+            2628,
+            781
+          ],
+          [
+            2628,
+            2273
+          ]
+        ],
+        "id": 2,
+        "isVertical": "true",
+        "text": "につき、最も普通なるもの、約九萬餘言を採り、之に",
+        "isTextline": "true",
+        "confidence": 0.952,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2456,
+            774
+          ],
+          [
+            2456,
+            1715
+          ],
+          [
+            2514,
+            774
+          ],
+          [
+            2514,
+            1715
+          ]
+        ],
+        "id": 3,
+        "isVertical": "true",
+        "text": "國語の對譯を施せるものなり。",
+        "isTextline": "true",
+        "confidence": 0.942,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2329,
+            723
+          ],
+          [
+            2329,
+            2276
+          ],
+          [
+            2401,
+            723
+          ],
+          [
+            2401,
+            2276
+          ]
+        ],
+        "id": 4,
+        "isVertical": "true",
+        "text": "一、本書に於て採用せる語音は主として厦門音を標",
+        "isTextline": "true",
+        "confidence": 0.95,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2213,
+            775
+          ],
+          [
+            2213,
+            2278
+          ],
+          [
+            2280,
+            775
+          ],
+          [
+            2280,
+            2278
+          ]
+        ],
+        "id": 5,
+        "isVertical": "true",
+        "text": "準とせり、此れ厦門音は津州音、泉州音の中間に位",
+        "isTextline": "true",
+        "confidence": 0.949,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2096,
+            777
+          ],
+          [
+            2096,
+            2275
+          ],
+          [
+            2165,
+            777
+          ],
+          [
+            2165,
+            2275
+          ]
+        ],
+        "id": 6,
+        "isVertical": "true",
+        "text": "し、二者の特質を併有するを以てなり、然れども淨",
+        "isTextline": "true",
+        "confidence": 0.954,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1982,
+            775
+          ],
+          [
+            1982,
+            2273
+          ],
+          [
+            2049,
+            775
+          ],
+          [
+            2049,
+            2273
+          ]
+        ],
+        "id": 7,
+        "isVertical": "true",
+        "text": "州、泉州其他に於て特別の音を有するものは又成",
+        "isTextline": "true",
+        "confidence": 0.954,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1875,
+            780
+          ],
+          [
+            1875,
+            1422
+          ],
+          [
+            1930,
+            780
+          ],
+          [
+            1930,
+            1422
+          ]
+        ],
+        "id": 8,
+        "isVertical": "true",
+        "text": "るべく之を採録せり。",
+        "isTextline": "true",
+        "confidence": 0.937,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1752,
+            722
+          ],
+          [
+            1752,
+            2270
+          ],
+          [
+            1818,
+            722
+          ],
+          [
+            1818,
+            2270
+          ]
+        ],
+        "id": 9,
+        "isVertical": "true",
+        "text": "一、語音中、五十音字を以て表はすこと能はざるもの",
+        "isTextline": "true",
+        "confidence": 0.943,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1635,
+            776
+          ],
+          [
+            1635,
+            2276
+          ],
+          [
+            1699,
+            776
+          ],
+          [
+            1699,
+            2276
+          ]
+        ],
+        "id": 10,
+        "isVertical": "true",
+        "text": "は別に符號字、及び符號を作りて之を表はせり。而",
+        "isTextline": "true",
+        "confidence": 0.953,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1521,
+            776
+          ],
+          [
+            1521,
+            2271
+          ],
+          [
+            1585,
+            776
+          ],
+          [
+            1585,
+            2271
+          ]
+        ],
+        "id": 11,
+        "isVertical": "true",
+        "text": "して其の詳細は別に臺灣語の發音の部に解説せ",
+        "isTextline": "true",
+        "confidence": 0.948,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1431,
+            775
+          ],
+          [
+            1431,
+            842
+          ],
+          [
+            1467,
+            775
+          ],
+          [
+            1467,
+            842
+          ]
+        ],
+        "id": 12,
+        "isVertical": "true",
+        "text": "り。",
+        "isTextline": "true",
+        "confidence": 0.829,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1288,
+            721
+          ],
+          [
+            1288,
+            2272
+          ],
+          [
+            1353,
+            721
+          ],
+          [
+            1353,
+            2272
+          ]
+        ],
+        "id": 13,
+        "isVertical": "true",
+        "text": "一、語詞の排列は大體五十音の順序によれりと雖も、",
+        "isTextline": "true",
+        "confidence": 0.943,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1172,
+            773
+          ],
+          [
+            1172,
+            2270
+          ],
+          [
+            1235,
+            773
+          ],
+          [
+            1235,
+            2270
+          ]
+        ],
+        "id": 14,
+        "isVertical": "true",
+        "text": "出氣音は基本の假名に併屬し、符號假名は基本の",
+        "isTextline": "true",
+        "confidence": 0.954,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1056,
+            771
+          ],
+          [
+            1056,
+            2274
+          ],
+          [
+            1120,
+            771
+          ],
+          [
+            1120,
+            2274
+          ]
+        ],
+        "id": 15,
+        "isVertical": "true",
+        "text": "假名の次に出せり(別紙索引表參照)、尙同一の假名",
+        "isTextline": "true",
+        "confidence": 0.947,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            939,
+            770
+          ],
+          [
+            939,
+            2271
+          ],
+          [
+            1003,
+            770
+          ],
+          [
+            1003,
+            2271
+          ]
+        ],
+        "id": 16,
+        "isVertical": "true",
+        "text": "を有する語詞にして音調又は常音、鼻音の相違あ",
+        "isTextline": "true",
+        "confidence": 0.948,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            822,
+            775
+          ],
+          [
+            822,
+            2275
+          ],
+          [
+            888,
+            775
+          ],
+          [
+            888,
+            2275
+          ]
+        ],
+        "id": 17,
+        "isVertical": "true",
+        "text": "る場合は、鼻音は常音の次に出し、音調は八聲の順",
+        "isTextline": "true",
+        "confidence": 0.953,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2912,
+            2484
+          ],
+          [
+            2912,
+            2841
+          ],
+          [
+            2965,
+            2484
+          ],
+          [
+            2965,
+            2841
+          ]
+        ],
+        "id": 18,
+        "isVertical": "true",
+        "text": "序によれり。",
+        "isTextline": "true",
+        "confidence": 0.92,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2785,
+            2437
+          ],
+          [
+            2785,
+            3985
+          ],
+          [
+            2851,
+            2437
+          ],
+          [
+            2851,
+            3985
+          ]
+        ],
+        "id": 19,
+        "isVertical": "true",
+        "text": "一、臺灣語を表はす漢字は大體從來慣用のものを用",
+        "isTextline": "true",
+        "confidence": 0.95,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2673,
+            2491
+          ],
+          [
+            2673,
+            3982
+          ],
+          [
+            2733,
+            2491
+          ],
+          [
+            2733,
+            3982
+          ]
+        ],
+        "id": 20,
+        "isVertical": "true",
+        "text": "ひたれども語原的に根據ありと認めたるものは",
+        "isTextline": "true",
+        "confidence": 0.942,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2554,
+            2484
+          ],
+          [
+            2554,
+            3986
+          ],
+          [
+            2619,
+            2484
+          ],
+          [
+            2619,
+            3986
+          ]
+        ],
+        "id": 21,
+        "isVertical": "true",
+        "text": "之に相當する文字を充用し、而して其の用法は務",
+        "isTextline": "true",
+        "confidence": 0.952,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2441,
+            2491
+          ],
+          [
+            2441,
+            3982
+          ],
+          [
+            2503,
+            2491
+          ],
+          [
+            2503,
+            3982
+          ]
+        ],
+        "id": 22,
+        "isVertical": "true",
+        "text": "めて統一を期せり。又適當なる漢字なき場合は、其",
+        "isTextline": "true",
+        "confidence": 0.947,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2324,
+            2490
+          ],
+          [
+            2324,
+            3979
+          ],
+          [
+            2385,
+            2490
+          ],
+          [
+            2385,
+            3979
+          ]
+        ],
+        "id": 23,
+        "isVertical": "true",
+        "text": "の意義に拘はらず同音又は類音の漢字を充用し、",
+        "isTextline": "true",
+        "confidence": 0.95,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2206,
+            2490
+          ],
+          [
+            2206,
+            3982
+          ],
+          [
+            2270,
+            2490
+          ],
+          [
+            2270,
+            3982
+          ]
+        ],
+        "id": 24,
+        "isVertical": "true",
+        "text": "又全く漢字を充つること能はざる場合は□を用",
+        "isTextline": "true",
+        "confidence": 0.947,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2097,
+            2485
+          ],
+          [
+            2097,
+            3055
+          ],
+          [
+            2151,
+            2485
+          ],
+          [
+            2151,
+            3055
+          ]
+        ],
+        "id": 25,
+        "isVertical": "true",
+        "text": "ひて之を表はせり。",
+        "isTextline": "true",
+        "confidence": 0.936,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1976,
+            2433
+          ],
+          [
+            1976,
+            3980
+          ],
+          [
+            2038,
+            2433
+          ],
+          [
+            2038,
+            3980
+          ]
+        ],
+        "id": 26,
+        "isVertical": "true",
+        "text": "一、成句、俚諺及び格言にして普通に行はるゝものは",
+        "isTextline": "true",
+        "confidence": 0.947,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1861,
+            2481
+          ],
+          [
+            1861,
+            3200
+          ],
+          [
+            1918,
+            2481
+          ],
+          [
+            1918,
+            3200
+          ]
+        ],
+        "id": 27,
+        "isVertical": "true",
+        "text": "成るべく之を採録せり。",
+        "isTextline": "true",
+        "confidence": 0.938,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1743,
+            2430
+          ],
+          [
+            1743,
+            3978
+          ],
+          [
+            1803,
+            2430
+          ],
+          [
+            1803,
+            3978
+          ]
+        ],
+        "id": 28,
+        "isVertical": "true",
+        "text": "一、譯語の下には成るべく同意語を擧げ應用の便に",
+        "isTextline": "true",
+        "confidence": 0.948,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1638,
+            2480
+          ],
+          [
+            1638,
+            2767
+          ],
+          [
+            1690,
+            2480
+          ],
+          [
+            1690,
+            2767
+          ]
+        ],
+        "id": 29,
+        "isVertical": "true",
+        "text": "供したり。",
+        "isTextline": "true",
+        "confidence": 0.926,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1517,
+            2434
+          ],
+          [
+            1517,
+            3985
+          ],
+          [
+            1574,
+            2434
+          ],
+          [
+            1574,
+            3985
+          ]
+        ],
+        "id": 30,
+        "isVertical": "true",
+        "text": "一、同一の語にして其の意義を異にするものは●●",
+        "isTextline": "true",
+        "confidence": 0.947,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1400,
+            2483
+          ],
+          [
+            1400,
+            3563
+          ],
+          [
+            1457,
+            2483
+          ],
+          [
+            1457,
+            3563
+          ]
+        ],
+        "id": 31,
+        "isVertical": "true",
+        "text": "の如き記號を用ひて之を區別せり。",
+        "isTextline": "true",
+        "confidence": 0.943,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1279,
+            2429
+          ],
+          [
+            1279,
+            3975
+          ],
+          [
+            1341,
+            2429
+          ],
+          [
+            1341,
+            3975
+          ]
+        ],
+        "id": 32,
+        "isVertical": "true",
+        "text": "一、例語、例句の場合に於て其の條の本語に相當する",
+        "isTextline": "true",
+        "confidence": 0.949,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1166,
+            2480
+          ],
+          [
+            1166,
+            3636
+          ],
+          [
+            1226,
+            2480
+          ],
+          [
+            1226,
+            3636
+          ]
+        ],
+        "id": 33,
+        "isVertical": "true",
+        "text": "所は(-)の記號を用ひて之を表はせり。",
+        "isTextline": "true",
+        "confidence": 0.947,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1049,
+            2430
+          ],
+          [
+            1049,
+            3978
+          ],
+          [
+            1111,
+            2430
+          ],
+          [
+            1111,
+            3978
+          ]
+        ],
+        "id": 34,
+        "isVertical": "true",
+        "text": "一、語詞、又は譯語の下には〕を施せるは同意語を示",
+        "isTextline": "true",
+        "confidence": 0.95,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            944,
+            2478
+          ],
+          [
+            944,
+            2545
+          ],
+          [
+            992,
+            2478
+          ],
+          [
+            992,
+            2545
+          ]
+        ],
+        "id": 35,
+        "isVertical": "true",
+        "text": "す。",
+        "isTextline": "true",
+        "confidence": 0.897,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            816,
+            2425
+          ],
+          [
+            816,
+            3974
+          ],
+          [
+            877,
+            2425
+          ],
+          [
+            877,
+            3974
+          ]
+        ],
+        "id": 36,
+        "isVertical": "true",
+        "text": "一、漢字の間に(-)を施せるは上に來る音の轉調する",
+        "isTextline": "true",
+        "confidence": 0.949,
+        "class_index": 1
+      }
+    ]
+  ],
+  "imginfo": {
+    "img_width": 4504,
+    "img_height": 4592,
+    "img_path": "../../../input/1218326_R0000011.jpg",
+    "img_name": "1218326_R0000011.jpg"
+  }
+}

@@ -1,0 +1,2482 @@
+{
+  "contents": [
+    [
+      {
+        "boundingBox": [
+          [
+            3259,
+            759
+          ],
+          [
+            3259,
+            1711
+          ],
+          [
+            3310,
+            759
+          ],
+          [
+            3310,
+            1711
+          ]
+        ],
+        "id": 0,
+        "isVertical": "true",
+        "text": "る。彼垣園-南菜種較沒起-來=あの畑は",
+        "isTextline": "true",
+        "confidence": 0.903,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            3157,
+            759
+          ],
+          [
+            3157,
+            1642
+          ],
+          [
+            3211,
+            759
+          ],
+          [
+            3211,
+            1642
+          ]
+        ],
+        "id": 1,
+        "isVertical": "true",
+        "text": "南を遮られてゐるから野菜がよくできない。",
+        "isTextline": "true",
+        "confidence": 0.896,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            3054,
+            635
+          ],
+          [
+            3054,
+            1717
+          ],
+          [
+            3108,
+            635
+          ],
+          [
+            3108,
+            1717
+          ]
+        ],
+        "id": 2,
+        "isVertical": "true",
+        "text": "アア向。 向。 向。 向ふ。 向く。 －海=海=海=海の方に向",
+        "isTextline": "true",
+        "confidence": 0.892,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2953,
+            761
+          ],
+          [
+            2953,
+            1711
+          ],
+          [
+            3006,
+            761
+          ],
+          [
+            3006,
+            1711
+          ]
+        ],
+        "id": 3,
+        "isVertical": "true",
+        "text": "く。1山=山に對する。㊁俯く。俯ける。1頭=",
+        "isTextline": "true",
+        "confidence": 0.873,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2850,
+            759
+          ],
+          [
+            2850,
+            1714
+          ],
+          [
+            2900,
+            759
+          ],
+          [
+            2900,
+            1714
+          ]
+        ],
+        "id": 4,
+        "isVertical": "true",
+        "text": "俯く。 ―腰=腰を屈める。 耳聽=聞耳を立てて",
+        "isTextline": "true",
+        "confidence": 0.89,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2747,
+            760
+          ],
+          [
+            2747,
+            1720
+          ],
+          [
+            2798,
+            760
+          ],
+          [
+            2798,
+            1720
+          ]
+        ],
+        "id": 5,
+        "isVertical": "true",
+        "text": "聞く。 ●一ー稻仔=五株の稻。 (田植の時一度俯",
+        "isTextline": "true",
+        "confidence": 0.908,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2644,
+            758
+          ],
+          [
+            2644,
+            1418
+          ],
+          [
+            2692,
+            758
+          ],
+          [
+            2692,
+            1418
+          ]
+        ],
+        "id": 6,
+        "isVertical": "true",
+        "text": "く每に五株づつ植ゑるよりいふ)。",
+        "isTextline": "true",
+        "confidence": 0.891,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2540,
+            639
+          ],
+          [
+            2540,
+            936
+          ],
+          [
+            2603,
+            639
+          ],
+          [
+            2603,
+            936
+          ]
+        ],
+        "id": 7,
+        "isVertical": "true",
+        "text": "ア。ア 呵。【略】。",
+        "isTextline": "true",
+        "confidence": 0.856,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2434,
+            639
+          ],
+          [
+            2434,
+            1722
+          ],
+          [
+            2486,
+            639
+          ],
+          [
+            2486,
+            1722
+          ]
+        ],
+        "id": 8,
+        "isVertical": "true",
+        "text": "アア 撮。 取込む。 －大部分を取込む。 ●附く。",
+        "isTextline": "true",
+        "confidence": 0.891,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2332,
+            763
+          ],
+          [
+            2332,
+            1714
+          ],
+          [
+            2387,
+            763
+          ],
+          [
+            2387,
+            1714
+          ]
+        ],
+        "id": 9,
+        "isVertical": "true",
+        "text": "左袒する。庇ふ。 ―歸旁=依怙贔負する。 ●遮",
+        "isTextline": "true",
+        "confidence": 0.876,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2230,
+            763
+          ],
+          [
+            2230,
+            1723
+          ],
+          [
+            2283,
+            763
+          ],
+          [
+            2283,
+            1723
+          ]
+        ],
+        "id": 10,
+        "isVertical": "true",
+        "text": "る。蔭になる。花被竹 =去=花が竹に掩はれる。",
+        "isTextline": "true",
+        "confidence": 0.869,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2129,
+            642
+          ],
+          [
+            2129,
+            1710
+          ],
+          [
+            2181,
+            642
+          ],
+          [
+            2181,
+            1710
+          ]
+        ],
+        "id": 11,
+        "isVertical": "true",
+        "text": "アア 呵。 (訝る時などの感動詞) あら。 おや。 ―我一",
+        "isTextline": "true",
+        "confidence": 0.879,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2028,
+            766
+          ],
+          [
+            2028,
+            1724
+          ],
+          [
+            2078,
+            766
+          ],
+          [
+            2078,
+            1724
+          ]
+        ],
+        "id": 12,
+        "isVertical": "true",
+        "text": "枝筆續無=去=おや僕の筆が無くなってしまった。",
+        "isTextline": "true",
+        "confidence": 0.863,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1925,
+            643
+          ],
+          [
+            1925,
+            1726
+          ],
+          [
+            1976,
+            643
+          ],
+          [
+            1976,
+            1726
+          ]
+        ],
+        "id": 13,
+        "isVertical": "true",
+        "text": "アア鑼。蹈。裸-=菓子又は餅の稻。鹹-=鹽蹈。甜",
+        "isTextline": "true",
+        "confidence": 0.883,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1825,
+            768
+          ],
+          [
+            1825,
+            1011
+          ],
+          [
+            1866,
+            768
+          ],
+          [
+            1866,
+            1011
+          ]
+        ],
+        "id": 14,
+        "isVertical": "true",
+        "text": "1=甘い館。",
+        "isTextline": "true",
+        "confidence": 0.737,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1720,
+            647
+          ],
+          [
+            1720,
+            1666
+          ],
+          [
+            1776,
+            647
+          ],
+          [
+            1776,
+            1666
+          ]
+        ],
+        "id": 15,
+        "isVertical": "true",
+        "text": "アア茂。覆ふ。 ―稻仔=雜草など生えて稻を覆ふ。",
+        "isTextline": "true",
+        "confidence": 0.851,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1619,
+            772
+          ],
+          [
+            1619,
+            1722
+          ],
+          [
+            1668,
+            772
+          ],
+          [
+            1668,
+            1722
+          ]
+        ],
+        "id": 16,
+        "isVertical": "true",
+        "text": "暦太-=家が暗い。近來伊錢蓋-=近來彼は",
+        "isTextline": "true",
+        "confidence": 0.888,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1518,
+            771
+          ],
+          [
+            1518,
+            1099
+          ],
+          [
+            1567,
+            771
+          ],
+          [
+            1567,
+            1099
+          ]
+        ],
+        "id": 17,
+        "isVertical": "true",
+        "text": "素敵に金がある。",
+        "isTextline": "true",
+        "confidence": 0.854,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1417,
+            649
+          ],
+          [
+            1417,
+            1633
+          ],
+          [
+            1466,
+            649
+          ],
+          [
+            1466,
+            1633
+          ]
+        ],
+        "id": 18,
+        "isVertical": "true",
+        "text": "アアアア阿-呵。--叫=乳兒などあーあーいふ。",
+        "isTextline": "true",
+        "confidence": 0.904,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1315,
+            647
+          ],
+          [
+            1315,
+            1546
+          ],
+          [
+            1367,
+            647
+          ],
+          [
+            1367,
+            1546
+          ]
+        ],
+        "id": 19,
+        "isVertical": "true",
+        "text": "アアアア 鐘‐鐘。 饐える。 味―=味が變る。",
+        "isTextline": "true",
+        "confidence": 0.903,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1214,
+            647
+          ],
+          [
+            1214,
+            1593
+          ],
+          [
+            1265,
+            647
+          ],
+          [
+            1265,
+            1593
+          ]
+        ],
+        "id": 20,
+        "isVertical": "true",
+        "text": "アアアア唖唖。 111叫=鳥などかーかー啼く。",
+        "isTextline": "true",
+        "confidence": 0.868,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1113,
+            650
+          ],
+          [
+            1113,
+            1725
+          ],
+          [
+            1166,
+            650
+          ],
+          [
+            1166,
+            1725
+          ]
+        ],
+        "id": 21,
+        "isVertical": "true",
+        "text": "アァアア鴨-仔。鶩の子。鴨。--聽雷=鵞が雷を",
+        "isTextline": "true",
+        "confidence": 0.849,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1009,
+            772
+          ],
+          [
+            1009,
+            1705
+          ],
+          [
+            1059,
+            772
+          ],
+          [
+            1059,
+            1705
+          ]
+        ],
+        "id": 22,
+        "isVertical": "true",
+        "text": "聽く。何を言はれても感がない。馬の耳に念佛。",
+        "isTextline": "true",
+        "confidence": 0.89,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            3267,
+            1795
+          ],
+          [
+            3267,
+            2437
+          ],
+          [
+            3321,
+            1795
+          ],
+          [
+            3321,
+            2437
+          ]
+        ],
+        "id": 23,
+        "isVertical": "true",
+        "text": "アァアア盒-仔。小な箱。小箱。",
+        "isTextline": "true",
+        "confidence": 0.879,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            3164,
+            1796
+          ],
+          [
+            3164,
+            2269
+          ],
+          [
+            3225,
+            1796
+          ],
+          [
+            3225,
+            2269
+          ]
+        ],
+        "id": 24,
+        "isVertical": "true",
+        "text": "アアアア遮-遮。【遮】。",
+        "isTextline": "true",
+        "confidence": 0.845,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            3063,
+            1799
+          ],
+          [
+            3063,
+            2879
+          ],
+          [
+            3116,
+            1799
+          ],
+          [
+            3116,
+            2879
+          ]
+        ],
+        "id": 25,
+        "isVertical": "true",
+        "text": "アアアア咳-咳。--哭=子供などあんあん泣く。●",
+        "isTextline": "true",
+        "confidence": 0.88,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2956,
+            1919
+          ],
+          [
+            2956,
+            2706
+          ],
+          [
+            3007,
+            1919
+          ],
+          [
+            3007,
+            2706
+          ]
+        ],
+        "id": 26,
+        "isVertical": "true",
+        "text": "喉咽!ー=ちんちんじゃんじゃんいふ。",
+        "isTextline": "true",
+        "confidence": 0.894,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2854,
+            1797
+          ],
+          [
+            2854,
+            2267
+          ],
+          [
+            2913,
+            1797
+          ],
+          [
+            2913,
+            2267
+          ]
+        ],
+        "id": 27,
+        "isVertical": "true",
+        "text": "アアアア攪欖。【覽】。",
+        "isTextline": "true",
+        "confidence": 0.892,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2752,
+            1796
+          ],
+          [
+            2752,
+            2525
+          ],
+          [
+            2809,
+            1796
+          ],
+          [
+            2809,
+            2525
+          ]
+        ],
+        "id": 28,
+        "isVertical": "true",
+        "text": "アアアア 向-向。 俯く。 腰を屈める。",
+        "isTextline": "true",
+        "confidence": 0.9,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2649,
+            1797
+          ],
+          [
+            2649,
+            2263
+          ],
+          [
+            2706,
+            1797
+          ],
+          [
+            2706,
+            2263
+          ]
+        ],
+        "id": 29,
+        "isVertical": "true",
+        "text": "アアアア欄欄。【欄】。",
+        "isTextline": "true",
+        "confidence": 0.875,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2547,
+            1797
+          ],
+          [
+            2547,
+            2793
+          ],
+          [
+            2603,
+            1797
+          ],
+          [
+            2603,
+            2793
+          ]
+        ],
+        "id": 30,
+        "isVertical": "true",
+        "text": "アアアア 叫-叫=牛など、 もーもーもー啼く。",
+        "isTextline": "true",
+        "confidence": 0.863,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2446,
+            1799
+          ],
+          [
+            2446,
+            2881
+          ],
+          [
+            2498,
+            1799
+          ],
+          [
+            2498,
+            2881
+          ]
+        ],
+        "id": 31,
+        "isVertical": "true",
+        "text": "アアアアアアアア喉咽喉病。子供の泣聲。あーあ",
+        "isTextline": "true",
+        "confidence": 0.899,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2351,
+            1931
+          ],
+          [
+            2351,
+            2265
+          ],
+          [
+            2389,
+            1931
+          ],
+          [
+            2389,
+            2265
+          ]
+        ],
+        "id": 32,
+        "isVertical": "true",
+        "text": "ー。ぎゃーぎゃー。",
+        "isTextline": "true",
+        "confidence": 0.859,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2239,
+            1801
+          ],
+          [
+            2239,
+            2663
+          ],
+          [
+            2289,
+            1801
+          ],
+          [
+            2289,
+            2663
+          ]
+        ],
+        "id": 33,
+        "isVertical": "true",
+        "text": "アアアアサアサア 掩臓臓。【腫膽】。",
+        "isTextline": "true",
+        "confidence": 0.896,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2137,
+            1803
+          ],
+          [
+            2137,
+            2642
+          ],
+          [
+            2193,
+            1803
+          ],
+          [
+            2193,
+            2642
+          ]
+        ],
+        "id": 34,
+        "isVertical": "true",
+        "text": "アアアアザァサァ翔-翔-開-開。【擱問】",
+        "isTextline": "true",
+        "confidence": 0.9,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2034,
+            1804
+          ],
+          [
+            2034,
+            2662
+          ],
+          [
+            2085,
+            1804
+          ],
+          [
+            2085,
+            2662
+          ]
+        ],
+        "id": 35,
+        "isVertical": "true",
+        "text": "アアアアサムサム 腕-臓-臓 臓臓】。",
+        "isTextline": "true",
+        "confidence": 0.892,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1933,
+            1805
+          ],
+          [
+            1933,
+            2885
+          ],
+          [
+            1984,
+            1805
+          ],
+          [
+            1984,
+            2885
+          ]
+        ],
+        "id": 36,
+        "isVertical": "true",
+        "text": "アァアアタヌ鴨仔癩。●蔦の發育の惡いもの。●意",
+        "isTextline": "true",
+        "confidence": 0.902,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1829,
+            1927
+          ],
+          [
+            1829,
+            2379
+          ],
+          [
+            1881,
+            1927
+          ],
+          [
+            1881,
+            2379
+          ]
+        ],
+        "id": 37,
+        "isVertical": "true",
+        "text": "氣地なし。【鴨痴仔】。",
+        "isTextline": "true",
+        "confidence": 0.88,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1729,
+            1804
+          ],
+          [
+            1729,
+            2605
+          ],
+          [
+            1785,
+            1804
+          ],
+          [
+            1785,
+            2605
+          ]
+        ],
+        "id": 38,
+        "isVertical": "true",
+        "text": "アァアアヴン鴨仔湯。(料理)鶩の汁。",
+        "isTextline": "true",
+        "confidence": 0.899,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1626,
+            1805
+          ],
+          [
+            1626,
+            2788
+          ],
+          [
+            1685,
+            1805
+          ],
+          [
+            1685,
+            2788
+          ]
+        ],
+        "id": 39,
+        "isVertical": "true",
+        "text": "アァアアベエ鴨仔尾。子鶩の發育の惡いもの。",
+        "isTextline": "true",
+        "confidence": 0.841,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1525,
+            1807
+          ],
+          [
+            1525,
+            2710
+          ],
+          [
+            1576,
+            1807
+          ],
+          [
+            1576,
+            2710
+          ]
+        ],
+        "id": 40,
+        "isVertical": "true",
+        "text": "アァアウ押後。後から護送する。殿する。",
+        "isTextline": "true",
+        "confidence": 0.871,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1425,
+            1807
+          ],
+          [
+            1425,
+            2890
+          ],
+          [
+            1475,
+            1807
+          ],
+          [
+            1475,
+            2890
+          ]
+        ],
+        "id": 41,
+        "isVertical": "true",
+        "text": "アアイイ阿婉。●母の姉妹。伯叔母さん。●妻の姉",
+        "isTextline": "true",
+        "confidence": 0.896,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1324,
+            1928
+          ],
+          [
+            1324,
+            2145
+          ],
+          [
+            1372,
+            1928
+          ],
+          [
+            1372,
+            2145
+          ]
+        ],
+        "id": 42,
+        "isVertical": "true",
+        "text": "妹。小姑。",
+        "isTextline": "true",
+        "confidence": 0.705,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1220,
+            1809
+          ],
+          [
+            1220,
+            2532
+          ],
+          [
+            1272,
+            1809
+          ],
+          [
+            1272,
+            2532
+          ]
+        ],
+        "id": 43,
+        "isVertical": "true",
+        "text": "アアイイ阿嬰。赤坊。赤兒。幼兒。",
+        "isTextline": "true",
+        "confidence": 0.882,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1118,
+            1808
+          ],
+          [
+            1118,
+            2416
+          ],
+          [
+            1172,
+            1808
+          ],
+          [
+            1172,
+            2416
+          ]
+        ],
+        "id": 44,
+        "isVertical": "true",
+        "text": "アアイイ阿痍。(泉)【阿嫉】。",
+        "isTextline": "true",
+        "confidence": 0.743,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1015,
+            1805
+          ],
+          [
+            1015,
+            2867
+          ],
+          [
+            1071,
+            1805
+          ],
+          [
+            1071,
+            2867
+          ]
+        ],
+        "id": 45,
+        "isVertical": "true",
+        "text": "アアイイ (同) (同) 蟬の一種。 【庵埔蟬】。",
+        "isTextline": "true",
+        "confidence": 0.881,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            3271,
+            2956
+          ],
+          [
+            3271,
+            3568
+          ],
+          [
+            3330,
+            2956
+          ],
+          [
+            3330,
+            3568
+          ]
+        ],
+        "id": 46,
+        "isVertical": "true",
+        "text": "アアイイ阿叟。(泉)。",
+        "isTextline": "true",
+        "confidence": 0.88,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            3167,
+            2955
+          ],
+          [
+            3167,
+            3571
+          ],
+          [
+            3226,
+            2955
+          ],
+          [
+            3226,
+            3571
+          ]
+        ],
+        "id": 47,
+        "isVertical": "true",
+        "text": "アアイイ阿嬰。(泉)【阿斐】。",
+        "isTextline": "true",
+        "confidence": 0.899,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            3064,
+            2954
+          ],
+          [
+            3064,
+            3548
+          ],
+          [
+            3123,
+            2954
+          ],
+          [
+            3123,
+            3548
+          ]
+        ],
+        "id": 48,
+        "isVertical": "true",
+        "text": "アノアイエク鴨-液。鶩の肉汁。",
+        "isTextline": "true",
+        "confidence": 0.893,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2964,
+            2955
+          ],
+          [
+            2964,
+            3722
+          ],
+          [
+            3014,
+            2955
+          ],
+          [
+            3014,
+            3722
+          ]
+        ],
+        "id": 49,
+        "isVertical": "true",
+        "text": "アアイェヌ亞鉛。トタン。",
+        "isTextline": "true",
+        "confidence": 0.893,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2858,
+            2957
+          ],
+          [
+            2858,
+            3895
+          ],
+          [
+            2914,
+            2957
+          ],
+          [
+            2914,
+            3895
+          ]
+        ],
+        "id": 50,
+        "isVertical": "true",
+        "text": "アアイェヌキヲ亞鉛-橋。亞鉛の針金の吊橋。",
+        "isTextline": "true",
+        "confidence": 0.868,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2756,
+            2956
+          ],
+          [
+            2756,
+            3669
+          ],
+          [
+            2813,
+            2956
+          ],
+          [
+            2813,
+            3669
+          ]
+        ],
+        "id": 51,
+        "isVertical": "true",
+        "text": "アアイェヌコン亞鉛管-管。亜鉛管。",
+        "isTextline": "true",
+        "confidence": 0.9,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2655,
+            2957
+          ],
+          [
+            2655,
+            3763
+          ],
+          [
+            2708,
+            2957
+          ],
+          [
+            2708,
+            3763
+          ]
+        ],
+        "id": 52,
+        "isVertical": "true",
+        "text": "アアイェヌソア亜-鉛-線。亜鉛の針金。",
+        "isTextline": "true",
+        "confidence": 0.907,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2553,
+            2956
+          ],
+          [
+            2553,
+            3678
+          ],
+          [
+            2607,
+            2956
+          ],
+          [
+            2607,
+            3678
+          ]
+        ],
+        "id": 53,
+        "isVertical": "true",
+        "text": "アアイェヌタン亜鉛-桶。バケツ。",
+        "isTextline": "true",
+        "confidence": 0.907,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2451,
+            2958
+          ],
+          [
+            2451,
+            3718
+          ],
+          [
+            2505,
+            2958
+          ],
+          [
+            2505,
+            3718
+          ]
+        ],
+        "id": 54,
+        "isVertical": "true",
+        "text": "アアイェヌネィ亞鉛鐵。(鑛)亞鉛。",
+        "isTextline": "true",
+        "confidence": 0.899,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2348,
+            2958
+          ],
+          [
+            2348,
+            3677
+          ],
+          [
+            2403,
+            2958
+          ],
+          [
+            2403,
+            3677
+          ]
+        ],
+        "id": 55,
+        "isVertical": "true",
+        "text": "アアイェヌトヲ亞鉛套。亞鉛張。",
+        "isTextline": "true",
+        "confidence": 0.881,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2244,
+            2960
+          ],
+          [
+            2244,
+            3852
+          ],
+          [
+            2298,
+            2960
+          ],
+          [
+            2298,
+            3852
+          ]
+        ],
+        "id": 56,
+        "isVertical": "true",
+        "text": "アアイェヌバン亞鉛-網。亞鉛の針金の網。",
+        "isTextline": "true",
+        "confidence": 0.889,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2145,
+            2959
+          ],
+          [
+            2145,
+            3675
+          ],
+          [
+            2195,
+            2959
+          ],
+          [
+            2195,
+            3675
+          ]
+        ],
+        "id": 57,
+        "isVertical": "true",
+        "text": "アアイェヌパヌ亜鉛版。亜鉛版。",
+        "isTextline": "true",
+        "confidence": 0.878,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            2043,
+            2960
+          ],
+          [
+            2043,
+            4018
+          ],
+          [
+            2096,
+            2960
+          ],
+          [
+            2096,
+            4018
+          ]
+        ],
+        "id": 58,
+        "isVertical": "true",
+        "text": "アアイェヌビア亞-鉛-片。トタン板。「針金。",
+        "isTextline": "true",
+        "confidence": 0.885,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1937,
+            2963
+          ],
+          [
+            1937,
+            4038
+          ],
+          [
+            1990,
+            2963
+          ],
+          [
+            1990,
+            4038
+          ]
+        ],
+        "id": 59,
+        "isVertical": "true",
+        "text": "アアイェヌポオ亜-鉛-捗。適當の長さに切った亜鉛の",
+        "isTextline": "true",
+        "confidence": 0.881,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1836,
+            2962
+          ],
+          [
+            1836,
+            4044
+          ],
+          [
+            1891,
+            2962
+          ],
+          [
+            1891,
+            4044
+          ]
+        ],
+        "id": 60,
+        "isVertical": "true",
+        "text": "アアイヲ向腰。腰を屈める。中腰になる。--拜=腰",
+        "isTextline": "true",
+        "confidence": 0.896,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1733,
+            3085
+          ],
+          [
+            1733,
+            3370
+          ],
+          [
+            1779,
+            3085
+          ],
+          [
+            1779,
+            3370
+          ]
+        ],
+        "id": 61,
+        "isVertical": "true",
+        "text": "を屈めて拜む。",
+        "isTextline": "true",
+        "confidence": 0.851,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1632,
+            2963
+          ],
+          [
+            1632,
+            3931
+          ],
+          [
+            1683,
+            2963
+          ],
+          [
+            1683,
+            3931
+          ]
+        ],
+        "id": 62,
+        "isVertical": "true",
+        "text": "アアウウ亦有。反語そんなことがあるものか。",
+        "isTextline": "true",
+        "confidence": 0.906,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1531,
+            2963
+          ],
+          [
+            1531,
+            4044
+          ],
+          [
+            1582,
+            2963
+          ],
+          [
+            1582,
+            4044
+          ]
+        ],
+        "id": 63,
+        "isVertical": "true",
+        "text": "アアウウチゥエエ亦有一-個。反語。……であるも",
+        "isTextline": "true",
+        "confidence": 0.914,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1429,
+            3092
+          ],
+          [
+            1429,
+            4044
+          ],
+          [
+            1478,
+            3092
+          ],
+          [
+            1478,
+            4044
+          ]
+        ],
+        "id": 64,
+        "isVertical": "true",
+        "text": "のか。伊----不去=彼が行かないことがあ",
+        "isTextline": "true",
+        "confidence": 0.905,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1328,
+            3088
+          ],
+          [
+            1328,
+            4028
+          ],
+          [
+            1376,
+            3088
+          ],
+          [
+            1376,
+            4028
+          ]
+        ],
+        "id": 65,
+        "isVertical": "true",
+        "text": "るものか。 ―――無＝無いことがあるものか。",
+        "isTextline": "true",
+        "confidence": 0.913,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1226,
+            2963
+          ],
+          [
+            1226,
+            3691
+          ],
+          [
+            1280,
+            2963
+          ],
+          [
+            1280,
+            3691
+          ]
+        ],
+        "id": 66,
+        "isVertical": "true",
+        "text": "アァウッ押-屈。抑へる。抑制する。",
+        "isTextline": "true",
+        "confidence": 0.892,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1121,
+            2964
+          ],
+          [
+            1121,
+            4044
+          ],
+          [
+            1174,
+            2964
+          ],
+          [
+            1174,
+            4044
+          ]
+        ],
+        "id": 67,
+        "isVertical": "true",
+        "text": "アァウヌ押韻。押韻。韻をふむ。「る。",
+        "isTextline": "true",
+        "confidence": 0.796,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            1021,
+            2965
+          ],
+          [
+            1021,
+            4035
+          ],
+          [
+            1074,
+            2965
+          ],
+          [
+            1074,
+            4035
+          ]
+        ],
+        "id": 68,
+        "isVertical": "true",
+        "text": "アアウヌ押運。運送する。ーー糧草=兵糧を運送す",
+        "isTextline": "true",
+        "confidence": 0.885,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            783,
+            665
+          ],
+          [
+            783,
+            1291
+          ],
+          [
+            833,
+            665
+          ],
+          [
+            833,
+            1291
+          ]
+        ],
+        "id": 69,
+        "isVertical": "true",
+        "text": "アアエエ阿嬰。阿嬰",
+        "isTextline": "true",
+        "confidence": 0.576,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            679,
+            664
+          ],
+          [
+            679,
+            1736
+          ],
+          [
+            730,
+            664
+          ],
+          [
+            730,
+            1736
+          ]
+        ],
+        "id": 70,
+        "isVertical": "true",
+        "text": "アアカア阿膠。(藥)黒い驢馬の皮より製した膠。(止",
+        "isTextline": "true",
+        "confidence": 0.902,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            579,
+            782
+          ],
+          [
+            579,
+            1305
+          ],
+          [
+            626,
+            782
+          ],
+          [
+            626,
+            1305
+          ]
+        ],
+        "id": 71,
+        "isVertical": "true",
+        "text": "血劑及滋養潤補藥となす)。",
+        "isTextline": "true",
+        "confidence": 0.897,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            481,
+            659
+          ],
+          [
+            481,
+            1268
+          ],
+          [
+            539,
+            659
+          ],
+          [
+            539,
+            1268
+          ]
+        ],
+        "id": 72,
+        "isVertical": "true",
+        "text": "アアカア阿子。(泉)【阿子】。",
+        "isTextline": "true",
+        "confidence": 0.873,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            380,
+            656
+          ],
+          [
+            380,
+            1157
+          ],
+          [
+            435,
+            656
+          ],
+          [
+            435,
+            1157
+          ]
+        ],
+        "id": 73,
+        "isVertical": "true",
+        "text": "アアカア鴨脚。鶩の脚。",
+        "isTextline": "true",
+        "confidence": 0.81,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            381,
+            1612
+          ],
+          [
+            381,
+            1734
+          ],
+          [
+            422,
+            1612
+          ],
+          [
+            422,
+            1734
+          ]
+        ],
+        "id": 74,
+        "isVertical": "true",
+        "text": "「びえ。",
+        "isTextline": "true",
+        "confidence": 0.436,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            276,
+            654
+          ],
+          [
+            276,
+            1732
+          ],
+          [
+            336,
+            654
+          ],
+          [
+            336,
+            1732
+          ]
+        ],
+        "id": 75,
+        "isVertical": "true",
+        "text": "アァカアシェク鴨脚-稷。(植)しこくびえ。かうばふ",
+        "isTextline": "true",
+        "confidence": 0.911,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            172,
+            655
+          ],
+          [
+            172,
+            1404
+          ],
+          [
+            235,
+            655
+          ],
+          [
+            235,
+            1404
+          ]
+        ],
+        "id": 76,
+        "isVertical": "true",
+        "text": "アァカアソエ鴨脚-黍。【鴨脚稷】。",
+        "isTextline": "true",
+        "confidence": 0.897,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            71,
+            657
+          ],
+          [
+            71,
+            1733
+          ],
+          [
+            131,
+            657
+          ],
+          [
+            131,
+            1733
+          ]
+        ],
+        "id": 77,
+        "isVertical": "true",
+        "text": "アフカアトエ鴨脚蹄。●鷲の水掻の裏。●甘藷の",
+        "isTextline": "true",
+        "confidence": 0.888,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            5,
+            778
+          ],
+          [
+            5,
+            1726
+          ],
+          [
+            45,
+            778
+          ],
+          [
+            45,
+            1726
+          ]
+        ],
+        "id": 78,
+        "isVertical": "true",
+        "text": "ひんしゅめいこんくわいぐわいひこうししょくにくにくしつすこ",
+        "isTextline": "true",
+        "confidence": 0.56,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            780,
+            1814
+          ],
+          [
+            780,
+            2816
+          ],
+          [
+            835,
+            1814
+          ],
+          [
+            835,
+            2816
+          ]
+        ],
+        "id": 79,
+        "isVertical": "true",
+        "text": "アァクイ鴨管。●鶩の餌袋。●ランプの丸ボヤ。",
+        "isTextline": "true",
+        "confidence": 0.89,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            679,
+            1814
+          ],
+          [
+            679,
+            2838
+          ],
+          [
+            731,
+            1814
+          ],
+          [
+            731,
+            2838
+          ]
+        ],
+        "id": 80,
+        "isVertical": "true",
+        "text": "アアクイキム押-櫃金。(新)訴訟などの供託金。",
+        "isTextline": "true",
+        "confidence": 0.888,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            579,
+            1814
+          ],
+          [
+            579,
+            2887
+          ],
+          [
+            629,
+            1814
+          ],
+          [
+            629,
+            2887
+          ]
+        ],
+        "id": 81,
+        "isVertical": "true",
+        "text": "アアクウ阿舅。●母の兄弟。伯叔父さん。●妻の兄",
+        "isTextline": "true",
+        "confidence": 0.896,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            480,
+            1814
+          ],
+          [
+            480,
+            2891
+          ],
+          [
+            530,
+            1814
+          ],
+          [
+            530,
+            2891
+          ]
+        ],
+        "id": 82,
+        "isVertical": "true",
+        "text": "アアクウ阿舅。(笑)【阿勇】。一弟。",
+        "isTextline": "true",
+        "confidence": 0.814,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            379,
+            1813
+          ],
+          [
+            379,
+            2561
+          ],
+          [
+            430,
+            1813
+          ],
+          [
+            430,
+            2561
+          ]
+        ],
+        "id": 83,
+        "isVertical": "true",
+        "text": "アァクウアア鴨痴仔。【鴨仔痩】。",
+        "isTextline": "true",
+        "confidence": 0.898,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            276,
+            1812
+          ],
+          [
+            276,
+            2585
+          ],
+          [
+            332,
+            1812
+          ],
+          [
+            332,
+            2585
+          ]
+        ],
+        "id": 84,
+        "isVertical": "true",
+        "text": "アァクン押扛。擔いだ荷を護送する。",
+        "isTextline": "true",
+        "confidence": 0.881,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            174,
+            1810
+          ],
+          [
+            174,
+            2373
+          ],
+          [
+            221,
+            1810
+          ],
+          [
+            221,
+            2373
+          ]
+        ],
+        "id": 85,
+        "isVertical": "true",
+        "text": "アアグイ阿礬。 (植)阿魏。",
+        "isTextline": "true",
+        "confidence": 0.873,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            70,
+            1814
+          ],
+          [
+            70,
+            2891
+          ],
+          [
+            125,
+            1814
+          ],
+          [
+            125,
+            2891
+          ]
+        ],
+        "id": 86,
+        "isVertical": "true",
+        "text": "アアグウ阿-語。●(動)蝉に似た蟲の名。○赤子に物",
+        "isTextline": "true",
+        "confidence": 0.872,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            780,
+            2961
+          ],
+          [
+            780,
+            3799
+          ],
+          [
+            835,
+            2961
+          ],
+          [
+            835,
+            3799
+          ]
+        ],
+        "id": 87,
+        "isVertical": "true",
+        "text": "アアコヲシア阿哥舍。(泉)【阿哥舍】。",
+        "isTextline": "true",
+        "confidence": 0.898,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            680,
+            2961
+          ],
+          [
+            680,
+            3551
+          ],
+          [
+            725,
+            2961
+          ],
+          [
+            725,
+            3551
+          ]
+        ],
+        "id": 88,
+        "isVertical": "true",
+        "text": "アア コン阿-公。 お祖父さん。",
+        "isTextline": "true",
+        "confidence": 0.84,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            578,
+            2963
+          ],
+          [
+            578,
+            3758
+          ],
+          [
+            634,
+            2963
+          ],
+          [
+            634,
+            3758
+          ]
+        ],
+        "id": 89,
+        "isVertical": "true",
+        "text": "アアコン阿公。(皇)。",
+        "isTextline": "true",
+        "confidence": 0.836,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            478,
+            2966
+          ],
+          [
+            478,
+            4035
+          ],
+          [
+            529,
+            2966
+          ],
+          [
+            529,
+            4035
+          ]
+        ],
+        "id": 90,
+        "isVertical": "true",
+        "text": "アアコンタウ阿・公豆。長く薄くて色の赤黒い莢の",
+        "isTextline": "true",
+        "confidence": 0.871,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            377,
+            3088
+          ],
+          [
+            377,
+            4019
+          ],
+          [
+            441,
+            3088
+          ],
+          [
+            441,
+            4019
+          ]
+        ],
+        "id": 91,
+        "isVertical": "true",
+        "text": "豆。「得た者。",
+        "isTextline": "true",
+        "confidence": 0.748,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            273,
+            2968
+          ],
+          [
+            273,
+            4040
+          ],
+          [
+            328,
+            2968
+          ],
+          [
+            328,
+            4040
+          ]
+        ],
+        "id": 92,
+        "isVertical": "true",
+        "text": "アアゴァヌ亜元。(五)進士の試驗に第二位の成績を",
+        "isTextline": "true",
+        "confidence": 0.9,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            170,
+            2972
+          ],
+          [
+            170,
+            4040
+          ],
+          [
+            228,
+            2972
+          ],
+          [
+            228,
+            4040
+          ]
+        ],
+        "id": 93,
+        "isVertical": "true",
+        "text": "アァサァ押東。躾ける。督責する。監督する。--",
+        "isTextline": "true",
+        "confidence": 0.898,
+        "class_index": 1
+      },
+      {
+        "boundingBox": [
+          [
+            69,
+            3093
+          ],
+          [
+            69,
+            3722
+          ],
+          [
+            117,
+            3093
+          ],
+          [
+            117,
+            3722
+          ]
+        ],
+        "id": 94,
+        "isVertical": "true",
+        "text": "子弟=子弟を躾ける。【調督】。",
+        "isTextline": "true",
+        "confidence": 0.822,
+        "class_index": 1
+      }
+    ]
+  ],
+  "imginfo": {
+    "img_width": 4504,
+    "img_height": 4592,
+    "img_path": "../../../input/1218326_R0000026.jpg",
+    "img_name": "1218326_R0000026.jpg"
+  }
+}
