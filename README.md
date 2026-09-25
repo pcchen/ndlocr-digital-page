@@ -1,6 +1,6 @@
 # NDLOCR Digital Page
 
-A browser-based inspection and correction viewer for NDLOCR-Lite XML. It places recognized vertical text and detected layout regions over the original scan while keeping the OCR data editable and exportable.
+A browser-based inspection and correction viewer for NDLOCR-Lite and NDLOCR CLI XML. It places recognized vertical text and detected layout regions over the corresponding scan while keeping the OCR data editable and exportable.
 
 The included sample is frame 11 and frame 26 from *Tai-Japanese Dictionary* (`台日大辭典`, NDL PID 1218326). Frame 26 contains 95 recognized text lines and 119 detected ruby regions.
 
@@ -12,6 +12,8 @@ The included sample is frame 11 and frame 26 from *Tai-Japanese Dictionary* (`�
 - Search and confidence filtering
 - Per-line OCR correction
 - Corrected XML export
+- Lite/CLI result switching for frame 26
+- Selectable CLI ruby readings
 - Responsive desktop and compact layouts
 
 ## Run locally
@@ -36,13 +38,16 @@ No build step or package installation is required.
 viewer/                         Static viewer application
 samples/1218326/images/         Original NDL page images
 samples/1218326/ocr/            NDLOCR-Lite XML, JSON, and text output
+samples/1218326/ocr-cli/        NDLOCR CLI XML, text, and separated page images
 ```
 
 ## OCR provenance and limitations
 
-The sample OCR was generated locally with NDLOCR-Lite 1.3.0. NDLOCR-Lite identifies ruby regions in frame 26, but those XML `BLOCK` elements contain coordinates only. They do not include recognized ruby strings or explicit associations with base characters.
+The Lite sample OCR was generated locally with NDLOCR-Lite 1.3.0. NDLOCR-Lite identifies ruby regions in frame 26, but those XML `BLOCK` elements contain coordinates only. They do not include recognized ruby strings or explicit associations with base characters.
 
-The viewer does not run OCR itself. It reads existing NDLOCR-Lite XML and lets a reviewer inspect and correct recognized line text.
+Frame 26 was also processed with NDLOCR CLI on a Tesla V100. The CLI separated the scan into left and right page images and produced 113 ruby regions with recognized strings. The viewer exposes each CLI page separately because its XML coordinates refer to those generated page images, not the original full scan.
+
+The viewer does not run OCR itself. It reads existing OCR XML and lets a reviewer inspect and correct recognized line and ruby text.
 
 ## Source material
 

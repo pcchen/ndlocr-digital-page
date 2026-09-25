@@ -256,6 +256,10 @@ button {
   border-color: #087f8c;
 }
 
+.show-regions .ocr-line.type-ruby {
+  border-color: #7d4698;
+}
+
 .show-regions .ocr-line.type-other {
   border-color: #846525;
 }
@@ -264,6 +268,12 @@ button {
 .mode-text .ocr-line {
   color: #151716;
   background: rgb(255 255 255 / 78%);
+}
+
+.mode-overlay .ocr-line.type-ruby,
+.mode-text .ocr-line.type-ruby {
+  color: #602276;
+  background: rgb(250 238 255 / 86%);
 }
 
 .mode-overlay .scan {

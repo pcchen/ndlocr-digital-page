@@ -62,6 +62,13 @@
           </select>
         </label>
 
+        <label class="field source-field">
+          <span>OCR result</span>
+          <select id="ocr-select">
+            <option value="lite">NDLOCR-Lite · Full scan</option>
+          </select>
+        </label>
+
         <label class="field search-field">
           <span>Search</span>
           <input id="search" type="search" placeholder="Text on this page">
@@ -80,7 +87,7 @@
           <span><i class="legend-block"></i>Ruby / block</span>
         </div>
 
-        <div id="empty-selection" class="empty-selection">Select a text region</div>
+        <div id="empty-selection" class="empty-selection">Select a text or ruby region</div>
 
         <form id="line-editor" class="line-editor" hidden>
           <div class="selection-heading">

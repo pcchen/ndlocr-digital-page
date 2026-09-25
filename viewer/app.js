@@ -3,23 +3,52 @@ const PAGE_CONFIGS = {
     pid: "1218326",
     frame: "26",
     title: "Tai-Japanese Dictionary",
-    imagePath: "../samples/1218326/images/1218326_R0000026.jpg",
-    xmlPath: "../samples/1218326/ocr/1218326_R0000026.xml",
-    exportName: "1218326_R0000026_corrected.xml"
+    defaultOcr: "lite",
+    ocrSources: {
+      lite: {
+        label: "NDLOCR-Lite · Full scan",
+        imagePath: "../samples/1218326/images/1218326_R0000026.jpg",
+        xmlPath: "../samples/1218326/ocr/1218326_R0000026.xml",
+        exportName: "1218326_R0000026_lite_corrected.xml"
+      },
+      "cli-l": {
+        label: "NDLOCR CLI · Left crop",
+        imagePath: "../samples/1218326/ocr-cli/frame26/pred_img/input_L.jpg",
+        xmlPath: "../samples/1218326/ocr-cli/frame26/xml/input.sorted.xml",
+        pageImageName: "input_L.jpg",
+        exportName: "1218326_R0000026_cli_left_corrected.xml"
+      },
+      "cli-r": {
+        label: "NDLOCR CLI · Right crop",
+        imagePath: "../samples/1218326/ocr-cli/frame26/pred_img/input_R.jpg",
+        xmlPath: "../samples/1218326/ocr-cli/frame26/xml/input.sorted.xml",
+        pageImageName: "input_R.jpg",
+        exportName: "1218326_R0000026_cli_right_corrected.xml"
+      }
+    }
   },
   "1218326-11": {
     pid: "1218326",
     frame: "11",
     title: "Tai-Japanese Dictionary",
-    imagePath: "../samples/1218326/images/1218326_R0000011.jpg",
-    xmlPath: "../samples/1218326/ocr/1218326_R0000011.xml",
-    exportName: "1218326_R0000011_corrected.xml"
+    defaultOcr: "lite",
+    ocrSources: {
+      lite: {
+        label: "NDLOCR-Lite · Full scan",
+        imagePath: "../samples/1218326/images/1218326_R0000011.jpg",
+        xmlPath: "../samples/1218326/ocr/1218326_R0000011.xml",
+        exportName: "1218326_R0000011_lite_corrected.xml"
+      }
+    }
   }
 };
 
 const initialState = new URLSearchParams(window.location.search);
 const requestedPage = `${initialState.get("pid")}-${initialState.get("frame")}`;
 const activePage = PAGE_CONFIGS[requestedPage] || PAGE_CONFIGS["1218326-26"];
+const requestedOcr = initialState.get("ocr") || activePage.defaultOcr;
+const activeOcrKey = activePage.ocrSources[requestedOcr] ? requestedOcr : activePage.defaultOcr;
+const activeOcr = activePage.ocrSources[activeOcrKey];
 
 const page = document.querySelector("#page");
 const viewport = document.querySelector("#viewport");
@@ -37,6 +66,7 @@ const lineEditor = document.querySelector("#line-editor");
 const emptySelection = document.querySelector("#empty-selection");
 const lineText = document.querySelector("#line-text");
 const pageSelect = document.querySelector("#page-select");
+const ocrSelect = document.querySelector("#ocr-select");
 
 let xmlDocument;
 let pageWidth = 3902;
@@ -44,7 +74,9 @@ let pageHeight = 2855;
 let zoom = 1;
 let selectedLine = null;
 let lines = [];
+let textLineCount = 0;
 let rubyBlockCount = 0;
+let rubyReadingCount = 0;
 
 function numberAttribute(element, name, fallback = 0) {
   const value = Number(element.getAttribute(name));
@@ -53,6 +85,7 @@ function numberAttribute(element, name, fallback = 0) {
 
 function classifyType(type) {
   if (type === "本文") return "type-main";
+  if (type === "ルビ") return "type-ruby";
   if (type === "割注" || type === "頭注" || type === "キャプション") return "type-note";
   return "type-other";
 }
@@ -63,7 +96,8 @@ function typeLabel(type) {
     "割注": "Interlinear note",
     "頭注": "Headnote",
     "キャプション": "Caption",
-    "広告文字": "Advertisement"
+    "広告文字": "Advertisement",
+    "ルビ": "Ruby"
   };
   return labels[type] || type || "Text";
 }
@@ -78,6 +112,7 @@ function makeLine(element) {
   const width = numberAttribute(element, "WIDTH");
   const height = numberAttribute(element, "HEIGHT");
   const confidence = numberAttribute(element, "CONF");
+  const hasOrder = element.hasAttribute("ORDER");
   const order = numberAttribute(element, "ORDER", 999999);
   const type = element.getAttribute("TYPE") || "";
   const value = element.getAttribute("STRING") || "";
@@ -94,7 +129,9 @@ function makeLine(element) {
   node.dataset.search = value.toLocaleLowerCase();
   node.setAttribute("role", "button");
   node.setAttribute("tabindex", "0");
-  node.setAttribute("aria-label", `${typeLabel(type)}, order ${order}: ${value}`);
+  const orderLabel = hasOrder ? `, order ${order}` : "";
+  const valueLabel = value || "No recognized text";
+  node.setAttribute("aria-label", `${typeLabel(type)}${orderLabel}: ${valueLabel}`);
 
   const string = document.createElement("span");
   string.className = "line-string";
@@ -103,10 +140,12 @@ function makeLine(element) {
 
   const badge = document.createElement("span");
   badge.className = "order-badge";
-  badge.textContent = order;
-  node.append(badge);
+  if (hasOrder) {
+    badge.textContent = order;
+    node.append(badge);
+  }
 
-  const line = { element, node, string, x, y, width, height, confidence, order, type, vertical };
+  const line = { element, node, string, x, y, width, height, confidence, order, hasOrder, type, vertical };
   node.addEventListener("click", () => selectLine(line));
   node.addEventListener("keydown", event => {
     if (event.key === "Enter" || event.key === " ") {
@@ -125,7 +164,7 @@ function selectLine(line) {
   lineEditor.hidden = false;
   document.querySelector("#selection-type").textContent = typeLabel(line.type);
   document.querySelector("#selection-confidence").textContent = `${line.confidence.toFixed(3)} confidence`;
-  document.querySelector("#selection-order").textContent = line.order;
+  document.querySelector("#selection-order").textContent = line.hasOrder ? line.order : "Not assigned";
   document.querySelector("#selection-direction").textContent = line.vertical ? "Vertical" : "Horizontal";
   document.querySelector("#selection-bounds").textContent = `${line.x}, ${line.y}, ${line.width} × ${line.height}`;
   lineText.value = line.element.getAttribute("STRING") || "";
@@ -176,14 +215,16 @@ function updateVisibility() {
   });
 
   const matchText = query ? ` · ${matches} matches` : "";
-  summary.textContent = `${visible}/${lines.length} lines · ${rubyBlockCount} ruby regions${matchText}`;
+  summary.textContent = `${visible}/${lines.length} regions · ${textLineCount} lines · ${rubyBlockCount} ruby regions · ${rubyReadingCount} readings${matchText}`;
 }
 
 function applyZoom(nextZoom) {
   zoom = Math.min(2.5, Math.max(0.5, nextZoom));
   const gutter = window.matchMedia("(max-width: 920px)").matches ? 28 : 56;
-  const available = Math.max(280, viewport.clientWidth - gutter);
-  const baseWidth = Math.min(1200, available);
+  const availableWidth = Math.max(180, viewport.clientWidth - gutter);
+  const availableHeight = Math.max(280, viewport.clientHeight - gutter);
+  const widthForHeight = Math.max(180, availableHeight * (pageWidth / pageHeight));
+  const baseWidth = Math.min(1200, availableWidth, widthForHeight);
   page.style.width = `${Math.round(baseWidth * zoom)}px`;
   document.querySelector("#zoom-label").textContent = `${Math.round(zoom * 100)}%`;
   requestAnimationFrame(updateFontSizes);
@@ -203,7 +244,7 @@ function exportXml() {
   const url = URL.createObjectURL(blob);
   const anchor = document.createElement("a");
   anchor.href = url;
-  anchor.download = activePage.exportName;
+  anchor.download = activeOcr.exportName;
   anchor.click();
   URL.revokeObjectURL(url);
 }
@@ -213,26 +254,39 @@ async function loadXml() {
     document.querySelector("#document-name").textContent = activePage.title;
     document.querySelector("#frame-name").textContent = `Frame ${activePage.frame}`;
     pageSelect.value = `${activePage.pid}-${activePage.frame}`;
-    scan.src = activePage.imagePath;
-    scan.alt = `Scanned page from ${activePage.title}`;
+    ocrSelect.replaceChildren(...Object.entries(activePage.ocrSources).map(([value, source]) => {
+      const option = document.createElement("option");
+      option.value = value;
+      option.textContent = source.label;
+      return option;
+    }));
+    ocrSelect.value = activeOcrKey;
+    scan.src = activeOcr.imagePath;
+    scan.alt = `${activeOcr.label} page from ${activePage.title}`;
 
-    const response = await fetch(activePage.xmlPath);
+    const response = await fetch(activeOcr.xmlPath);
     if (!response.ok) throw new Error(`XML request failed: ${response.status}`);
     const source = await response.text();
     xmlDocument = new DOMParser().parseFromString(source, "application/xml");
     if (xmlDocument.querySelector("parsererror")) throw new Error("The OCR XML could not be parsed.");
 
-    const pageElement = xmlDocument.querySelector("PAGE");
+    const pageElements = [...xmlDocument.querySelectorAll("PAGE")];
+    const pageElement = activeOcr.pageImageName
+      ? pageElements.find(element => element.getAttribute("IMAGENAME") === activeOcr.pageImageName)
+      : pageElements[0];
+    if (!pageElement) throw new Error("The selected page was not found in the OCR XML.");
     pageWidth = numberAttribute(pageElement, "WIDTH", pageWidth);
     pageHeight = numberAttribute(pageElement, "HEIGHT", pageHeight);
     page.style.aspectRatio = `${pageWidth} / ${pageHeight}`;
 
-    lines = [...xmlDocument.querySelectorAll("LINE")]
-      .map(makeLine)
-      .sort((a, b) => a.order - b.order);
+    const textElements = [...pageElement.querySelectorAll("LINE")];
+    const rubyElements = [...pageElement.querySelectorAll('BLOCK[TYPE="ルビ"]')];
+    textLineCount = textElements.length;
+    rubyBlockCount = rubyElements.length;
+    rubyReadingCount = rubyElements.filter(element => (element.getAttribute("STRING") || "").length > 0).length;
+    lines = [...textElements.map(makeLine).sort((a, b) => a.order - b.order), ...rubyElements.map(makeLine)];
     textLayer.replaceChildren(...lines.map(line => line.node));
-    rubyBlockCount = xmlDocument.querySelectorAll('BLOCK[TYPE="ルビ"]').length;
-    renderStructure(xmlDocument);
+    renderStructure(pageElement);
     updateVisibility();
     applyZoom(1);
     loading.hidden = true;
@@ -269,6 +323,11 @@ pageSelect.addEventListener("change", () => {
   const nextUrl = new URL(window.location.href);
   nextUrl.searchParams.set("pid", pid);
   nextUrl.searchParams.set("frame", frame);
+  window.location.assign(nextUrl);
+});
+ocrSelect.addEventListener("change", () => {
+  const nextUrl = new URL(window.location.href);
+  nextUrl.searchParams.set("ocr", ocrSelect.value);
   window.location.assign(nextUrl);
 });
 
