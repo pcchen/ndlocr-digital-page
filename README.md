@@ -6,13 +6,15 @@ The included sample is frame 11 and frame 26 from *Tai-Japanese Dictionary* (`Âè
 
 ## Features
 
-- Facsimile, OCR overlay, and reconstructed-text views
+- Facsimile, OCR overlay, reconstructed-text, and Lite/CLI comparison views
 - Original XML coordinates and reading order
 - Text, layout, and ruby-region overlays
 - Search and confidence filtering
 - Per-line OCR correction
 - Corrected XML export
-- Lite/CLI result switching for frame 26
+- Lite/CLI result switching for frames 11 and 26
+- Character-level difference highlighting and review-only filtering
+- CSV export with explicit review markers for every non-exact comparison
 - Selectable CLI ruby readings
 - Responsive desktop and compact layouts
 
@@ -46,6 +48,8 @@ samples/1218326/ocr-cli/        NDLOCR CLI XML, text, and separated page images
 The Lite sample OCR was generated locally with NDLOCR-Lite 1.3.0. NDLOCR-Lite identifies ruby regions in frame 26, but those XML `BLOCK` elements contain coordinates only. They do not include recognized ruby strings or explicit associations with base characters.
 
 Frame 26 was also processed with NDLOCR CLI on a Tesla V100. The CLI separated the scan into left and right page images and produced 113 ruby regions with recognized strings. The viewer exposes each CLI page separately because its XML coordinates refer to those generated page images, not the original full scan.
+
+The comparison view aligns Lite and CLI text lines, including limited one-to-two line segmentation differences. It falls back to order-independent assignment when the two engines disagree about reading order. Exact normalized matches are shown as consensus; every character difference and every unmatched line is marked for review. Agreement is useful supporting evidence, but it is not a substitute for checking the scan because both models can make the same error.
 
 The viewer does not run OCR itself. It reads existing OCR XML and lets a reviewer inspect and correct recognized line and ruby text.
 

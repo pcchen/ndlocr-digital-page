@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Taiwanese Vocabulary - Digital Page</title>
-    <link rel="stylesheet" href="styles.css?v=2">
+    <link rel="stylesheet" href="styles.css?v=4">
   </head>
   <body>
     <header class="toolbar">
@@ -17,6 +17,7 @@
         <button type="button" class="is-active" data-mode="facsimile">Facsimile</button>
         <button type="button" data-mode="overlay">Overlay</button>
         <button type="button" data-mode="text">Text</button>
+        <button type="button" data-mode="compare">Compare</button>
       </div>
 
       <div class="toolbar-actions">
@@ -45,12 +46,31 @@
             <div id="text-layer" class="text-layer"></div>
             <div id="loading" class="loading">Loading XML...</div>
           </div>
+          <section id="comparison-view" class="comparison-view" aria-label="OCR comparison" hidden>
+            <header class="comparison-header">
+              <div>
+                <h2>Lite vs CLI</h2>
+                <p>Exact agreement is supporting evidence; every difference requires review.</p>
+              </div>
+              <button id="export-comparison" type="button" class="command-button">Export CSV</button>
+            </header>
+            <div id="comparison-stats" class="comparison-stats" aria-live="polite"></div>
+            <div class="comparison-controls">
+              <div class="comparison-filter segmented" role="group" aria-label="Comparison filter">
+                <button type="button" class="is-active" data-comparison-filter="all">All</button>
+                <button type="button" data-comparison-filter="review">Review</button>
+              </div>
+              <span id="comparison-count" class="comparison-count"></span>
+            </div>
+            <div id="comparison-list" class="comparison-list"></div>
+            <div id="comparison-loading" class="comparison-loading">Comparing OCR results...</div>
+          </section>
         </div>
       </section>
 
       <aside class="inspector" aria-label="OCR inspector">
         <div class="inspector-header">
-          <h1>OCR Inspector</h1>
+          <h1 id="inspector-title">OCR Inspector</h1>
           <button id="export-xml" type="button" class="command-button">Export XML</button>
         </div>
 
@@ -62,7 +82,7 @@
           </select>
         </label>
 
-        <label class="field source-field">
+        <label class="field source-field ocr-source-field">
           <span>OCR result</span>
           <select id="ocr-select">
             <option value="lite">NDLOCR-Lite · Full scan</option>
@@ -109,6 +129,7 @@
       </aside>
     </main>
 
-    <script src="app.js?v=2"></script>
+    <script src="compare.js?v=2"></script>
+    <script src="app.js?v=4"></script>
   </body>
 </html>

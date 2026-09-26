@@ -38,6 +38,20 @@ const PAGE_CONFIGS = {
         imagePath: "../samples/1218326/images/1218326_R0000011.jpg",
         xmlPath: "../samples/1218326/ocr/1218326_R0000011.xml",
         exportName: "1218326_R0000011_lite_corrected.xml"
+      },
+      "cli-l": {
+        label: "NDLOCR CLI · Left crop",
+        imagePath: "../samples/1218326/ocr-cli/frame11/pred_img/input_L.jpg",
+        xmlPath: "../samples/1218326/ocr-cli/frame11/xml/input.sorted.xml",
+        pageImageName: "input_L.jpg",
+        exportName: "1218326_R0000011_cli_left_corrected.xml"
+      },
+      "cli-r": {
+        label: "NDLOCR CLI · Right crop",
+        imagePath: "../samples/1218326/ocr-cli/frame11/pred_img/input_R.jpg",
+        xmlPath: "../samples/1218326/ocr-cli/frame11/xml/input.sorted.xml",
+        pageImageName: "input_R.jpg",
+        exportName: "1218326_R0000011_cli_right_corrected.xml"
       }
     }
   }
@@ -67,6 +81,12 @@ const emptySelection = document.querySelector("#empty-selection");
 const lineText = document.querySelector("#line-text");
 const pageSelect = document.querySelector("#page-select");
 const ocrSelect = document.querySelector("#ocr-select");
+const comparisonView = document.querySelector("#comparison-view");
+const comparisonList = document.querySelector("#comparison-list");
+const comparisonStats = document.querySelector("#comparison-stats");
+const comparisonCount = document.querySelector("#comparison-count");
+const comparisonLoading = document.querySelector("#comparison-loading");
+const inspectorTitle = document.querySelector("#inspector-title");
 
 let xmlDocument;
 let pageWidth = 3902;
@@ -77,6 +97,9 @@ let lines = [];
 let textLineCount = 0;
 let rubyBlockCount = 0;
 let rubyReadingCount = 0;
+let comparisonRows = [];
+let comparisonFilter = "all";
+let comparisonPromise;
 
 function numberAttribute(element, name, fallback = 0) {
   const value = Number(element.getAttribute(name));
@@ -216,6 +239,7 @@ function updateVisibility() {
 
   const matchText = query ? ` · ${matches} matches` : "";
   summary.textContent = `${visible}/${lines.length} regions · ${textLineCount} lines · ${rubyBlockCount} ruby regions · ${rubyReadingCount} readings${matchText}`;
+  if (comparisonRows.length > 0) renderComparison();
 }
 
 function applyZoom(nextZoom) {
@@ -231,11 +255,187 @@ function applyZoom(nextZoom) {
 }
 
 function setMode(mode) {
+  const comparing = mode === "compare";
+  page.hidden = comparing;
+  comparisonView.hidden = !comparing;
+  document.body.classList.toggle("comparison-mode", comparing);
+  inspectorTitle.textContent = comparing ? "Comparison review" : "OCR Inspector";
+  const modeUrl = new URL(window.location.href);
+  if (mode === "facsimile") modeUrl.searchParams.delete("view");
+  else modeUrl.searchParams.set("view", mode);
+  window.history.replaceState({}, "", modeUrl);
   page.classList.remove("mode-facsimile", "mode-overlay", "mode-text");
-  page.classList.add(`mode-${mode}`);
+  if (!comparing) page.classList.add(`mode-${mode}`);
   document.querySelectorAll("[data-mode]").forEach(button => {
     button.classList.toggle("is-active", button.dataset.mode === mode);
   });
+  if (comparing) loadComparison();
+  else requestAnimationFrame(() => applyZoom(zoom));
+}
+
+async function fetchXmlDocument(path) {
+  const response = await fetch(path);
+  if (!response.ok) throw new Error(`XML request failed: ${response.status}`);
+  const source = await response.text();
+  const document = new DOMParser().parseFromString(source, "application/xml");
+  if (document.querySelector("parsererror")) throw new Error("The OCR XML could not be parsed.");
+  return document;
+}
+
+function orderedStrings(pageElement) {
+  return [...pageElement.querySelectorAll("LINE")]
+    .sort((left, right) => numberAttribute(left, "ORDER", 999999) - numberAttribute(right, "ORDER", 999999))
+    .map(element => element.getAttribute("STRING") || "")
+    .filter(value => OcrCompare.normalizeText(value).length > 0);
+}
+
+function makeDiffText(operations, side) {
+  const paragraph = document.createElement("p");
+  paragraph.className = "comparison-text";
+  const visibleTypes = side === "left" ? ["equal", "delete"] : ["equal", "insert"];
+  const changedType = side === "left" ? "delete" : "insert";
+
+  operations.filter(operation => visibleTypes.includes(operation.type)).forEach(operation => {
+    if (operation.type === changedType) {
+      const mark = document.createElement("mark");
+      mark.textContent = operation.value;
+      paragraph.append(mark);
+    } else {
+      paragraph.append(document.createTextNode(operation.value));
+    }
+  });
+  return paragraph;
+}
+
+function makeComparisonSource(label, text, operations, side) {
+  const source = document.createElement("section");
+  source.className = "comparison-source";
+  const heading = document.createElement("h3");
+  heading.textContent = label;
+  source.append(heading);
+  if (text.length === 0) {
+    const paragraph = document.createElement("p");
+    paragraph.className = "comparison-text";
+    const missing = document.createElement("span");
+    missing.className = "missing-text";
+    missing.textContent = "No corresponding line";
+    paragraph.append(missing);
+    source.append(paragraph);
+  } else {
+    source.append(makeDiffText(operations, side));
+  }
+  return source;
+}
+
+function renderComparison() {
+  const query = searchInput.value.trim().toLocaleLowerCase();
+  const filtered = comparisonRows.filter(row => {
+    if (comparisonFilter === "review" && row.status === "exact") return false;
+    if (!query) return true;
+    return `${row.left.join(" ")} ${row.right.join(" ")}`.toLocaleLowerCase().includes(query);
+  });
+
+  const labels = { exact: "Exact", close: "Review · close", conflict: "Review", missing: "Review" };
+  comparisonList.replaceChildren(...filtered.map((row, index) => {
+    const leftText = row.left.join("\n");
+    const rightText = row.right.join("\n");
+    const operations = OcrCompare.diffChars(leftText, rightText);
+    const item = document.createElement("article");
+    item.className = `comparison-row status-${row.status}`;
+
+    const status = document.createElement("div");
+    status.className = "comparison-status";
+    const statusLabel = document.createElement("strong");
+    statusLabel.textContent = labels[row.status];
+    const score = document.createElement("span");
+    score.textContent = row.status === "missing" ? "One source only" : `${Math.round(row.similarity * 100)}% similar`;
+    status.append(statusLabel, score);
+
+    item.append(
+      status,
+      makeComparisonSource("NDLOCR-Lite", leftText, operations, "left"),
+      makeComparisonSource("NDLOCR CLI", rightText, operations, "right")
+    );
+    item.dataset.row = index;
+    return item;
+  }));
+  comparisonCount.textContent = `${filtered.length} of ${comparisonRows.length} comparisons`;
+}
+
+function renderComparisonStats() {
+  const counts = { exact: 0, close: 0, conflict: 0, missing: 0 };
+  comparisonRows.forEach(row => { counts[row.status] += 1; });
+  const definitions = [
+    [counts.exact, "Exact"],
+    [counts.close, "Close review"],
+    [counts.conflict, "Conflict"],
+    [counts.missing, "Missing"]
+  ];
+  comparisonStats.replaceChildren(...definitions.map(([count, label]) => {
+    const item = document.createElement("div");
+    item.className = "comparison-stat";
+    const value = document.createElement("strong");
+    value.textContent = count;
+    const name = document.createElement("span");
+    name.textContent = label;
+    item.append(value, name);
+    return item;
+  }));
+}
+
+async function loadComparison() {
+  if (comparisonPromise) return comparisonPromise;
+  comparisonPromise = (async () => {
+    try {
+      const liteSource = activePage.ocrSources.lite;
+      const cliSource = activePage.ocrSources["cli-r"] || activePage.ocrSources["cli-l"];
+      if (!liteSource || !cliSource) throw new Error("Both Lite and CLI results are required for comparison.");
+      const [liteDocument, cliDocument] = await Promise.all([
+        fetchXmlDocument(liteSource.xmlPath),
+        fetchXmlDocument(cliSource.xmlPath)
+      ]);
+      const litePage = liteDocument.querySelector("PAGE");
+      const cliPageNames = ["cli-r", "cli-l"]
+        .map(key => activePage.ocrSources[key]?.pageImageName)
+        .filter(Boolean);
+      const cliPages = cliPageNames
+        .map(name => [...cliDocument.querySelectorAll("PAGE")].find(element => element.getAttribute("IMAGENAME") === name))
+        .filter(Boolean);
+      comparisonRows = OcrCompare.alignLines(
+        orderedStrings(litePage),
+        cliPages.flatMap(orderedStrings)
+      );
+      renderComparisonStats();
+      renderComparison();
+      comparisonLoading.hidden = true;
+    } catch (error) {
+      comparisonLoading.textContent = error.message;
+      comparisonLoading.classList.add("is-error");
+    }
+  })();
+  return comparisonPromise;
+}
+
+function exportComparison() {
+  const escapeCell = value => `"${String(value).replaceAll('"', '""')}"`;
+  const rows = [
+    ["review", "status", "similarity", "ndlocr_lite", "ndlocr_cli"],
+    ...comparisonRows.map(row => [
+      row.status === "exact" ? "no" : "yes",
+      row.status,
+      row.similarity.toFixed(4),
+      row.left.join("\n"),
+      row.right.join("\n")
+    ])
+  ];
+  const csv = rows.map(row => row.map(escapeCell).join(",")).join("\n");
+  const blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const anchor = document.createElement("a");
+  anchor.href = url;
+  anchor.download = `${activePage.pid}_frame${activePage.frame}_lite_cli_comparison.csv`;
+  anchor.click();
+  URL.revokeObjectURL(url);
 }
 
 function exportXml() {
@@ -318,6 +518,16 @@ document.querySelector("#zoom-out").addEventListener("click", () => applyZoom(zo
 document.querySelector("#zoom-reset").addEventListener("click", () => applyZoom(1));
 document.querySelector("#zoom-in").addEventListener("click", () => applyZoom(zoom + 0.25));
 document.querySelector("#export-xml").addEventListener("click", exportXml);
+document.querySelector("#export-comparison").addEventListener("click", exportComparison);
+document.querySelectorAll("[data-comparison-filter]").forEach(button => {
+  button.addEventListener("click", () => {
+    comparisonFilter = button.dataset.comparisonFilter;
+    document.querySelectorAll("[data-comparison-filter]").forEach(candidate => {
+      candidate.classList.toggle("is-active", candidate === button);
+    });
+    renderComparison();
+  });
+});
 pageSelect.addEventListener("change", () => {
   const [pid, frame] = pageSelect.value.split("-");
   const nextUrl = new URL(window.location.href);
@@ -335,7 +545,7 @@ new ResizeObserver(() => updateFontSizes()).observe(page);
 window.addEventListener("resize", () => applyZoom(zoom));
 
 const initialMode = initialState.get("view");
-if (["facsimile", "overlay", "text"].includes(initialMode)) setMode(initialMode);
+if (["facsimile", "overlay", "text", "compare"].includes(initialMode)) setMode(initialMode);
 if (initialState.get("regions") === "1") {
   showRegions.checked = true;
   page.classList.add("show-regions");
